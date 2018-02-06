@@ -1,0 +1,725 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0043)http://www.richarea.com/demo/rich_calendar/ -->
+<HTML><HEAD><TITLE>Rich Calendar, Cross-browser 100% JavaScript calendar script</TITLE><LINK 
+href="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/style.css" 
+type=text/css rel=STYLESHEET>
+<META 
+content="Rich Calendar is Cross-browser, 100% JavaScript calendar script implementing the appropriate functionality with many advanced options widely extending fields of its applications. No pop-up windows. Skinnable, multilingual. Mulitiple instances on one page.&#13;&#10;Allows relative or absolute to position calendar in DOM structure of page. And more. Integrated with Smart Grid." 
+name=Description>
+<META 
+content="free rich calendar web2.0 web 2.0 javascript cross-browser skinnable multilingual date formats pop-up popup smart grid ajax absolute positioning relative dom multiple instances" 
+name=Keywords>
+<META http-equiv=Content-Type content="text/html; charset=windows-1251">
+<SCRIPT language=JavaScript 
+src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/jsscripts.js"></SCRIPT>
+
+<SCRIPT language=JavaScript>
+    	var class_confirm_delete = 'Delete row?';
+    	var class_no_rows_to_edit = 'First mark what rows you need to edit!';
+	</SCRIPT>
+<LINK 
+href="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/rich_calendar.css" 
+type=text/css rel=STYLESHEET>
+<SCRIPT language=JavaScript 
+src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/rich_calendar.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=JavaScript 
+src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/rc_lang_en.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=JavaScript 
+src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/rc_lang_ru.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=JavaScript 
+src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/domready.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=javascript>
+ function validate_forum_message(form) {
+ if (!validate_notempty(form.title.value)) {
+ form.title.focus();
+ return fail('Input your name!');
+ }
+ if (!validate_notempty(form.email.value)) {
+ form.email.focus();
+ return fail('Input your E-mail!');
+ }
+ if (!validate_email(form.email.value)) {
+ form.email.focus();
+ return fail('Input a valid E-mail!');
+ }
+
+ if (!validate_notempty(form.name.value)) {
+ form.name.focus(); 
+return fail('Input title of your message!');
+ }
+  var rich_text = get_rich('message');
+ if (!validate_notempty(rich_text) || rich_text == '<br>' || rich_text == '<P>&nbsp;</P>') 
+{
+ return fail('Input text of your message!');
+ }
+
+ if (!validate_notempty(form.secret_number.value)) {
+ form.secret_number.focus(); 
+return fail('Input characters shown on the picture!');
+ }
+ return true;
+ }
+ </SCRIPT>
+
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY bottomMargin=0 leftMargin=0 topMargin=0 rightMargin=0>
+<TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0><!-- head of the page -->
+  <TBODY>
+  <TR>
+    <TD vAlign=top height=1>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=middle width=160 
+          background="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/top-left.gif" 
+          height=58><A href="http://www.richarea.com/"><IMG height=36 
+            src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/re_logo.gif" 
+            width=128 vspace=6 border=0></A></TD>
+          <TD vAlign=top height=58>
+            <TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" 
+            border=0>
+              <TBODY>
+              <TR bgColor=#275883>
+                <TD height="100%">&nbsp;</TD>
+                <TD align=right><A href="http://www.richarea.com/"><IMG 
+                  height=8 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/home.gif" 
+                  width=25 border=0></A> <IMG height=7 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/p.gif" 
+                  width=8 border=0> <A 
+                  href="http://www.richarea.com/contact/"><IMG height=7 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/contacts.gif" 
+                  width=46 border=0></A> </TD>
+                <TD><IMG height=1 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/space.gif" 
+                  width=10 border=0></TD></TR>
+              <TR>
+                <TD vAlign=bottom><IMG height=23 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/right-bottom.gif" 
+                  width=415 border=0></TD>
+                <TD width="100%" bgColor=#ffffff>&nbsp;</TD>
+                <TD bgColor=#275883><IMG height=1 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/space.gif" 
+                  width=10 
+  border=0></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR><!-- !head of the page --><!-- body of the page -->
+  <TR>
+    <TD vAlign=top height="100%">
+      <TABLE height="100%" cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR><!-- left colomn of the page -->
+          <TD vAlign=top bgColor=#275883><!-- menu -->
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD><IMG height=26 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/menu.gif" 
+                  width=187 border=0></TD></TR><!-- menu items -->
+              <TR>
+                <TD bgColor=#275883><IMG height=2 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/space.gif" 
+                  width=1 border=0></TD></TR>
+              <TR>
+                <TD bgColor=#e4e9ed><IMG height=8 hspace=6 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/p-m.gif" 
+                  width=9 align=absMiddle vspace=10 border=0><A class=menu_link 
+                  href="http://www.richarea.com/features/">Features</A></TD></TR>
+              <TR>
+                <TD bgColor=#275883><IMG height=2 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/space.gif" 
+                  width=1 border=0></TD></TR>
+              <TR>
+                <TD bgColor=#e4e9ed><IMG height=8 hspace=6 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/p-m.gif" 
+                  width=9 align=absMiddle vspace=10 border=0><A class=menu_link 
+                  href="http://www.richarea.com/requirements/">Requirements</A></TD></TR>
+              <TR>
+                <TD bgColor=#275883><IMG height=2 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/space.gif" 
+                  width=1 border=0></TD></TR>
+              <TR>
+                <TD bgColor=#e4e9ed><IMG height=8 hspace=6 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/p-m.gif" 
+                  width=9 align=absMiddle vspace=10 border=0><A class=menu_link 
+                  href="http://www.richarea.com/installation/">Installation&amp;Using</A></TD></TR>
+              <TR>
+                <TD bgColor=#275883><IMG height=2 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/space.gif" 
+                  width=1 border=0></TD></TR>
+              <TR>
+                <TD bgColor=#e4e9ed><IMG height=8 hspace=6 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/p-m.gif" 
+                  width=9 align=absMiddle vspace=10 border=0><A class=menu_link 
+                  href="http://www.richarea.com/demo/">Demo</A></TD></TR>
+              <TR>
+                <TD bgColor=#275883><IMG height=2 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/space.gif" 
+                  width=1 border=0></TD></TR>
+              <TR>
+                <TD bgColor=#e4e9ed><IMG height=8 hspace=6 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/p-m.gif" 
+                  width=9 align=absMiddle vspace=10 border=0><A class=menu_link 
+                  href="http://www.richarea.com/order/">Order</A></TD></TR>
+              <TR>
+                <TD bgColor=#275883><IMG height=2 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/space.gif" 
+                  width=1 border=0></TD></TR>
+              <TR>
+                <TD bgColor=#e4e9ed><IMG height=8 hspace=6 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/p-m.gif" 
+                  width=9 align=absMiddle vspace=10 border=0><A class=menu_link 
+                  href="http://www.richarea.com/license/">License</A></TD></TR>
+              <TR>
+                <TD bgColor=#275883><IMG height=2 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/space.gif" 
+                  width=1 border=0></TD></TR>
+              <TR>
+                <TD bgColor=#e4e9ed><IMG height=8 hspace=6 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/p-m.gif" 
+                  width=9 align=absMiddle vspace=10 border=0><A class=menu_link 
+                  href="http://www.richarea.com/contact/">Contact us</A></TD></TR>
+              <TR>
+                <TD bgColor=#275883><IMG height=2 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/space.gif" 
+                  width=1 border=0></TD></TR>
+              <TR>
+                <TD bgColor=#e4e9ed><IMG height=8 hspace=6 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/p-m.gif" 
+                  width=9 align=absMiddle vspace=10 border=0><A class=menu_link 
+                  href="http://www.richarea.com/support/">Support</A></TD></TR>
+              <TR>
+                <TD bgColor=#275883><IMG height=2 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/space.gif" 
+                  width=1 border=0></TD></TR>
+              <TR>
+                <TD bgColor=#e4e9ed><IMG height=8 hspace=6 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/p-m.gif" 
+                  width=9 align=absMiddle vspace=10 border=0><A class=menu_link 
+                  href="http://www.richarea.com/download/">Download</A></TD></TR>
+              <TR>
+                <TD bgColor=#275883><IMG height=2 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/space.gif" 
+                  width=1 border=0></TD></TR>
+              <TR>
+                <TD bgColor=#e4e9ed><IMG height=8 hspace=6 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/p-m.gif" 
+                  width=9 align=absMiddle vspace=10 border=0><A class=menu_link 
+                  href="http://www.richarea.com/links/">Useful Links</A></TD></TR>
+              <TR>
+                <TD bgColor=#275883><IMG height=2 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/space.gif" 
+                  width=1 border=0></TD></TR>
+              <TR>
+                <TD bgColor=#e4e9ed><IMG height=8 hspace=6 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/p-m.gif" 
+                  width=9 align=absMiddle vspace=10 border=0><A class=menu_link 
+                  href="http://www.richarea.com/about/">About us</A></TD></TR><!-- !menu items -->
+              <TR>
+                <TD><IMG height=9 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/menu-bottom.gif" 
+                  width=187 border=0></TD></TR></TBODY></TABLE><!-- !menu --><!-- awards -->
+            <TABLE cellSpacing=0 cellPadding=0 align=center border=0>
+              <TBODY>
+              <TR>
+                <TD height=10></TD></TR>
+              <TR>
+                <TD><IMG style="WIDTH: 177px; HEIGHT: 38px" height=38 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/awards.gif" 
+                  width=177 border=0></TD></TR>
+              <TR>
+                <TD height=2></TD></TR>
+              <TR>
+                <TD bgColor=#5d81a1>
+                  <TABLE cellSpacing=0 cellPadding=0 align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD height=7></TD></TR>
+                    <TR>
+                      <TD class=awards align=middle><A 
+                        href="http://www.sofotex.com/" target=_blank><IMG 
+                        style="WIDTH: 120px; HEIGHT: 60px" height=60 
+                        alt="Freeware and shareware downloads" src="" width=120 
+                        border=0></A><BR><IMG height=5 width=1 
+                        scr="/work/buby/site/page_img/space.gif"><BR><A 
+                        href="http://www.shareup.com/" target=_blank><IMG 
+                        style="WIDTH: 98px; HEIGHT: 31px" height=60 
+                        alt="Freeware and shareware downloads" src="" width=120 
+                        border=0></A><BR><IMG height=5 width=1 
+                        scr="/work/buby/site/page_img/space.gif"><BR><A 
+                        href="http://www.brothersoft.com/" target=_blank><IMG 
+                        style="WIDTH: 100px; HEIGHT: 40px" height=60 
+                        alt="5 Rating" src="" width=120 border=0></A><BR><IMG 
+                        height=5 width=1 
+                        scr="/work/buby/site/page_img/space.gif"><BR><A 
+                        href="http://www.smartdownloads.net/Detailed/Rich%20Editor.html" 
+                        target=_blank><IMG height=84 alt=www.smartdownloads.net 
+                        src="" width=152 border=0></A><BR><IMG height=5 width=1 
+                        scr="/work/buby/site/page_img/space.gif"><BR><A 
+                        href="http://www.goldenwebawards.com/officialawardwinner.shtml" 
+                        target=_blank><IMG src="" border=0></A> <BR><IMG 
+                        height=5 width=1 
+                        scr="/work/buby/site/page_img/space.gif"><BR><A 
+                        href="http://www.softforall.com/WebAuthoring/HTMLEditors/Rich_Editor10020038.htm" 
+                        target=_blank><IMG 
+                        src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/5stars.gif" 
+                        border=0></A> <BR><IMG height=5 width=1 
+                        scr="/work/buby/site/page_img/space.gif"><BR><A 
+                        href="http://www.sharetool.com/Web_Author/HTML_Editors/Rich_Editor_20615.html" 
+                        target=_blank><IMG height=31 
+                        alt="Software download Center" src="" width=98 
+                        border=0></A></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD bgColor=#5d81a1 height=10></TD></TR>
+              <TR>
+                <TD><IMG style="WIDTH: 177px; HEIGHT: 7px" height=7 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/left-bottom.gif" 
+                  width=177 border=0></TD></TR></TBODY></TABLE><!-- !awards --></TD><!-- !left colomn of the page -->
+          <TD bgColor=#275883><IMG height=1 
+            src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/space.gif" 
+            width=3 border=0></TD><!-- right colomn of the page -->
+          <TD vAlign=top width="100%">
+            <TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" 
+            border=0><!-- main content -->
+              <TBODY>
+              <TR>
+                <TD vAlign=top height="100%">
+                  <TABLE height="100%" cellSpacing=11 cellPadding=0 width="100%" 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=page_text vAlign=top width="100%"><!-- page title -->
+                        <H1 class=page_title><IMG height=10 hspace=4 
+                        src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/pp.gif" 
+                        width=11 border=0>Rich Calendar</H1><!-- !page title --><!-- page text -->
+                        <DIV>Cross-browser, 100% JavaScript calendar script 
+                        implementing the appropriate functionality with many 
+                        advanced options widely extending fields of its 
+                        applications. </DIV>
+                        <P><FONT face=Garamond size=+1><A 
+                        title="Rich Calendar - Cross-browser, 100% JavaScript calendar script" 
+                        href="http://www.richarea.com/page_img/rich-calendar.zip">Download 
+                        Rich Calendar</A> </FONT></P>
+                        <H4>Features</H4>
+                        <DIV>
+                        <UL>
+                          <LI><STRONG>No pop-up windows</STRONG> (some browsers 
+                          and software installed on user's side do not allow 
+                          such windows to open) 
+                          <LI><STRONG>Skinnable</STRONG> (all you need is just 
+                          one line of code to change calendar layout 
+                          completely). Skins are fully CSS-based 
+                          <LI><STRONG>Multilingual</STRONG> (one line of code 
+                          again to make calendar speaking another language) 
+                          <LI><STRONG>Language dependent date formats</STRONG> 
+                          <LI><STRONG>Multiple calendar instances on one 
+                          page</STRONG> 
+                          <LI><STRONG>Relative or absolute positioning</STRONG> 
+                          (allows to embed calendar objects in html document or 
+                          position them absolutely using flexible horizontal and 
+                          vertical alignment options). Alignment options 
+                          supported: left, right, center, top, bottom, 
+                          adj_right, adj_bottom 
+                          <LI><STRONG>User-defined behaviour</STRONG> (you can 
+                          intercept calendar events and handle them according to 
+                          logic of your application) 
+                          <LI><STRONG>Could be associated with an 
+                          element</STRONG> (eg text field) to read/write date 
+                          from/to (in many cases this allows to minimize amount 
+                          of code and time necessary to make the calendar 
+                          working) 
+                          <LI><STRONG>Pop-up mode</STRONG> (calendar closes on 
+                          mouse click outside it) 
+                          <LI><STRONG>Any week days as weekend days</STRONG> 
+                          <LI><STRONG>Option to choose any week day to start 
+                          week with</STRONG> 
+                          <LI><STRONG>Integrated with <EM><A 
+                          title="Ajax-based table editing tool" 
+                          href="http://www.richarea.com/demo/smart_grid/">Smart 
+                          Grid</A></EM></STRONG> <EM>(Ajax-based table editing 
+                          tool)</EM> </LI></UL></DIV>
+                        <H4>Requirements</H4>
+                        <DIV>Rich Calendar works in IE, Mozilla-based browsers 
+                        such as Firefox, Opera 9+, and Safari 3.0. </DIV>
+                        <H4>License</H4>
+                        <DIV>Free for non-commercial using. Copyright 
+                        information must stay intact. Please contact author for 
+                        permission to use it in commercial projects. </DIV>
+                        <H4>Examples</H4>
+                        <H5>1. Absolute positioned calendar. No alignment 
+                        settings. Pop-up mode off</H5>
+                        <DIV 
+                        id=cal1_div></DIV><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><STRONG>Code:</STRONG><BR><PRE>var div_cal1 = document.getElementById("cal1_div");
+var div_cal1_pos = RichCalendar.get_obj_pos(div_cal1);
+
+var cal_obj = new RichCalendar();
+	cal_obj.auto_close = false;
+	cal_obj.user_onchange_handler = cal_on_change_dummy;
+	cal_obj.show(div_cal1_pos[0]+20, div_cal1_pos[1]);
+
+
+// user defined onchange handler
+function cal_on_change_dummy(cal, object_code) {
+	if (object_code == 'day') {
+		alert('Date selected: ' + cal.get_formatted_date());
+		cal.show_date();
+	}
+}
+</PRE>
+                        <H5>2. Absolute positioned calendar. Position is 
+                        calculated based on position of the text field below. 
+                        Alignment settings - "adj_right-top" (such settings are 
+                        also possible: "-top" and "adj_right-"!). User defined 
+                        handlers. Skin 'alt'. User defined date format. Week 
+                        starts with Tuesday. Time is shown</H5>
+                        <DIV style="MARGIN-LEFT: 100px"><INPUT id=text_field><INPUT onclick=show_cal(this); type=button value=...><BR></DIV><BR><STRONG>Code:</STRONG><BR><PRE>var cal_obj2 = null;
+
+var format = '%j %M %Y %H:%i';
+
+// show calendar
+function show_cal(el) {
+
+	if (cal_obj2) return;
+
+var text_field = document.getElementById("text_field");
+
+	cal_obj2 = new RichCalendar();
+	cal_obj2.start_week_day = 2;
+	cal_obj2.show_time = true;
+	cal_obj2.user_onchange_handler = cal2_on_change;
+	cal_obj2.user_onclose_handler = cal2_on_close;
+	cal_obj2.user_onautoclose_handler = cal2_on_autoclose;
+
+	cal_obj2.parse_date(text_field.value, format);
+
+	cal_obj2.show_at_element(text_field, "adj_right-top");
+	cal_obj2.change_skin('alt');
+
+}
+
+// user defined onchange handler
+function cal2_on_change(cal, object_code) {
+	if (object_code == 'day') {
+		document.getElementById("text_field").value = cal.get_formatted_date(format);
+		cal.hide();
+		cal_obj2 = null;
+	}
+}
+
+// user defined onclose handler (used in pop-up mode - when auto_close is true)
+function cal2_on_close(cal) {
+	if (window.confirm('Are you sure to close the calendar?')) {
+		cal.hide();
+		cal_obj2 = null;
+	}
+}
+
+// user defined onautoclose handler
+function cal2_on_autoclose(cal) {
+	cal_obj2 = null;
+}
+</PRE>
+                        <H5>3. Relative positioned calendar. Added as a child to 
+                        a table cell below. Alignment settings - "child". User 
+                        defined handlers (do not allow to close calendar)</H5>
+                        <TABLE 
+                        style="BORDER-RIGHT: #00f 1px solid; BORDER-TOP: #00f 1px solid; BORDER-LEFT: #00f 1px solid; BORDER-BOTTOM: #00f 1px solid; BORDER-COLLAPSE: collapse" 
+                        cellSpacing=0 cellPadding=0 border=1>
+                          <TBODY>
+                          <TR>
+                            <TD style="FONT-SIZE: 11px" align=middle>Calendar 
+                              in the table cell below</TD></TR>
+                          <TR>
+                            <TD 
+                        id=cal3_td></TD></TR></TBODY></TABLE><BR><STRONG>Code:</STRONG><BR><PRE>var cal3_td = document.getElementById('cal3_td');
+
+var cal_obj3 = new RichCalendar();
+	cal_obj3.auto_close = false;
+	cal_obj3.user_onchange_handler = cal_on_change_dummy;
+	cal_obj3.user_onclose_handler = cal3_on_close;
+	cal_obj3.show_at_element(cal3_td, "child");
+
+// user defined onclose handler
+function cal3_on_close(cal) {
+}
+</PRE>
+                        <SCRIPT language=JavaScript>
+
+// user defined onchange handler
+function cal_on_change_dummy(cal, object_code) {
+	if (object_code == 'day') {
+		alert('Date selected: ' + cal.get_formatted_date());
+		cal.show_date();
+	}
+}
+
+
+var cal_obj2 = null;
+
+var format = '%j %M %Y %H:%i';
+
+// show calendar
+function show_cal(el) {
+
+	if (cal_obj2) return;
+
+var text_field = document.getElementById("text_field");
+
+	cal_obj2 = new RichCalendar();
+	cal_obj2.start_week_day = 2;
+	cal_obj2.show_time = true;
+	cal_obj2.user_onchange_handler = cal2_on_change;
+	cal_obj2.user_onclose_handler = cal2_on_close;
+	cal_obj2.user_onautoclose_handler = cal2_on_autoclose;
+
+	cal_obj2.parse_date(text_field.value, format);
+
+	cal_obj2.show_at_element(text_field, "adj_right-top");
+	cal_obj2.change_skin('alt');
+
+}
+
+// user defined onchange handler
+function cal2_on_change(cal, object_code) {
+	if (object_code == 'day') {
+		document.getElementById("text_field").value = cal.get_formatted_date(format);
+		cal.hide();
+		cal_obj2 = null;
+	}
+}
+
+// user defined onclose handler
+function cal2_on_close(cal) {
+	if (window.confirm('Are you sure to close the calendar?')) {
+		cal.hide();
+		cal_obj2 = null;
+	}
+}
+
+// user defined onclose handler (used in pop-up mode - when auto_close is true)
+function cal2_on_autoclose(cal) {
+	cal_obj2 = null;
+}
+
+
+// user defined onclose handler
+function cal3_on_close(cal) {
+}
+
+
+// embed calendars in page when page is loaded as otherwise IE could fail
+// loading the page
+function rc_body_onload() {
+
+var div_cal1 = document.getElementById("cal1_div");
+var div_cal1_pos = RichCalendar.get_obj_pos(div_cal1);
+
+var cal_obj = new RichCalendar();
+	cal_obj.auto_close = false;
+	cal_obj.user_onchange_handler = cal_on_change_dummy;
+	cal_obj.show(div_cal1_pos[0]+20, div_cal1_pos[1]);
+
+
+var cal3_td = document.getElementById('cal3_td');
+
+var cal_obj3 = new RichCalendar();
+	cal_obj3.auto_close = false;
+	cal_obj3.user_onchange_handler = cal_on_change_dummy;
+	cal_obj3.user_onclose_handler = cal3_on_close;
+	cal_obj3.show_at_element(cal3_td, "child");
+
+}
+
+window.onload = rc_body_onload;
+
+</SCRIPT>
+
+                        <H4>Feedback</H4>
+                        <DIV>Please email to <STRONG>re /at/ 
+                        richarea.com</STRONG>. </DIV>
+                        <P><FONT face=Garamond size=+1><A 
+                        title="Rich Calendar - Cross-browser, 100% JavaScript calendar script" 
+                        href="http://www.richarea.com/page_img/rich-calendar.zip">Download 
+                        Rich Calendar</A> </FONT></P>
+                        <P align=center>
+                        <SCRIPT type=text/javascript><!--
+google_ad_client = "pub-1207620151362018";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text";
+google_ad_channel ="";
+//--></SCRIPT>
+
+                        <SCRIPT 
+                        src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/show_ads.js" 
+                        type=text/javascript>
+</SCRIPT>
+                        </P><!-- !page text --></TD>
+                      <TD class=page_text vAlign=top>
+                        <STYLE type=text/css>.forum_search_input {
+	FONT-SIZE: 10px; WIDTH: 100%; FONT-FAMILY: verdana
+}
+.forum_search_button {
+	FONT-SIZE: 10px; FONT-FAMILY: verdana
+}
+.forum_search_text {
+	FONT-SIZE: 10px; FONT-FAMILY: verdana
+}
+</STYLE>
+
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                        align=center border=0>
+                          <TBODY>
+                          <TR>
+                            <TD align=middle bgColor=#e4e9ed><A 
+                              style="TEXT-DECORATION: none" 
+                              href="http://www.richarea.com/support/"><FONT 
+                              color=#000099><B>Support forum</B></FONT></A> 
+                          </TD></TR>
+                          <TR>
+                            <TD>Last post sent by <I>Carlos</I>:<BR><A 
+                              href="http://www.richarea.com/support/answer.php?forum=2004">The 
+                              input file dos not appear in firefox 
+                            3...</A><BR></TD></TR></TBODY></TABLE>
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                        align=center border=0>
+                          <TBODY>
+                          <TR>
+                            <TD><IMG height=4 
+                              src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/space.gif" 
+                              width=1></TD></TR>
+                          <FORM action=../../support/forum_search.php 
+                          method=post><INPUT type=hidden name=time> 
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD><SPAN 
+                                class=forum_search_text>Search:</SPAN></TD>
+                                <TD width="100%"><INPUT class=forum_search_input 
+                                name=to_find></TD>
+                                <TD><INPUT class=forum_search_button type=submit value=Ok></TD></TR>
+                                <TR>
+                                <TD align=middle colSpan=3><INPUT id=all_words 
+                                type=checkbox name=all_words><LABEL 
+                                class=forum_search_text for=all_words>all 
+                                words</LABEL></TD></TR></TBODY></TABLE></TD></TR></FORM></TBODY></TABLE><BR><LINK 
+                        href="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/apps_style.css" 
+                        type=text/css rel=STYLESHEET>
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                        align=center border=0>
+                          <TBODY>
+                          <TR>
+                            <TD align=middle bgColor=#e4e9ed><A 
+                              style="TEXT-DECORATION: none" 
+                              href="http://www.richarea.com/demo/usage/"><FONT 
+                              color=#000099><B>Find RE here</B></FONT></A> 
+</TD></TR>
+                          <TR>
+                            <TD><A class=apps_announce 
+                              href="http://www.richarea.com/demo/usage/index.php#app_link1">Morgle 
+                              Link Mail Protection service...</A>» 
+                        </TD></TR></TBODY></TABLE><BR>
+                        <DIV align=center><A 
+                        href="http://www.hotscripts.com/Detailed/20160.html?RID=67" 
+                        target=_blank><IMG style="WIDTH: 120px; HEIGHT: 60px" 
+                        src="" border=0></A></DIV><BR>
+                        <CENTER><FONT color=#000000><FONT face=Verdana 
+                        size=4><STRONG>Smart&nbsp;Grid</STRONG></FONT></FONT> 
+                        <DIV align=center><EM>Ajax-driven<BR></EM>table editing 
+                        tool<BR></DIV><STRONG><FONT face=Garamond><A 
+                        title="Smart Grid - Ajax-driven table editing tool" 
+                        href="http://www.richarea.com/demo/smart_grid/">free 
+                        download</A><BR></FONT></STRONG><STRONG><FONT 
+                        face=Garamond><BR><A 
+                        title="Cross-browser calendar free download" 
+                        href="http://www.richarea.com/demo/rich_calendar/"><IMG 
+                        style="WIDTH: 128px; HEIGHT: 144px" 
+                        alt="Cross-browser calendar free download" 
+                        src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/rich-calendar.gif" 
+                        border=0></A></FONT></STRONG></CENTER><BR><A 
+                        href="http://www.richarea.com/demo/rich_calendar/bn_redir.php?id=1&amp;bn=68" 
+                        target=_blank>
+                        <DIV align=center><IMG 
+                        style="WIDTH: 128px; HEIGHT: 36px" 
+                        alt="Download HTML2XHTML JavaScript converter!" src="" 
+                        align=center border=0></DIV><BR></A><!-- ÎÏÐÎÑ -->
+                        <TABLE cellSpacing=2 cellPadding=0 width="100%" 
+                        bgColor=#4b84ba border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=4 width="100%" 
+                              bgColor=#4b84ba border=0>
+                                <TBODY>
+                                <TR><!--    <td><img src="img/white_kub.gif" width=3 height=3 alt="" border="0"></td>
+-->
+                                <TD class=menu1>&nbsp;<FONT 
+                                color=#ffffff>POLL</FONT></TD></TR>
+                                <TR><!--    <td bgcolor="white"><img src="img/space.gif" width=1 height=1 alt="" border="0"></td>
+-->
+                                <TD bgColor=white colSpan=2>
+                                <FORM action="" method=post><INPUT type=hidden 
+                                value=69 name=block_id><INPUT type=hidden 
+                                value=vote name=poll_action><INPUT type=hidden 
+                                value=2 name=poll_id><B>What language would you 
+                                like RE to support?</B>
+                                <TABLE cellSpacing=0 cellPadding=1 border=0>
+                                <TBODY>
+                                <TR>
+                                <TD><INPUT type=radio CHECKED value=11 
+                                name=poll_answer></TD>
+                                <TD>PERL</TD></TR>
+                                <TR>
+                                <TD><INPUT type=radio value=10 
+                                name=poll_answer></TD>
+                                <TD>ASP.NET</TD></TR>
+                                <TR>
+                                <TD><INPUT type=radio value=9 
+                                name=poll_answer></TD>
+                                <TD>ColdFusion</TD></TR>
+                                <TR>
+                                <TD><INPUT type=radio value=8 
+                                name=poll_answer></TD>
+                                <TD>JSP</TD></TR>
+                                <TR>
+                                <TD><INPUT type=radio value=7 
+                                name=poll_answer></TD>
+                                <TD>ASP&amp;PHP is 
+                                enough</TD></TR></TBODY></TABLE>
+                                <DIV align=center><INPUT type=submit value=Send!><BR><A 
+                                href="http://www.richarea.com/demo/rich_calendar/index.php?poll_id=2&amp;block_id=69&amp;poll_action=results">results</A></DIV></FORM></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- îïðîñ êîíåö --><BR>
+                        <DIV align=center><A 
+                        href="https://www.paypal.com/us/verified/pal=re@richarea.com" 
+                        target=_blank><IMG style="WIDTH: 100px; HEIGHT: 100px" 
+                        src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/verification_seal.gif" 
+                        border=0></A></DIV>
+                        <DIV align=center><A 
+                        href="https://www.paypal.com/us/mrb/pal=Q9K5FMPLSJXYU" 
+                        target=_blank><FONT style="COLOR: red">learn 
+                        more</FONT></A></DIV></TD></TR>
+                    <TR>
+                      <TD 
+                      background="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/line.gif" 
+                      height=3></TD></TR></TBODY></TABLE></TD></TR><!-- !main content -->
+              <TR>
+                <TD vAlign=bottom align=right><IMG height=21 
+                  src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/right-bottom-center.gif" 
+                  width=285 border=0></TD></TR><!-- copyright info -->
+              <TR>
+                <TD class=copyright vAlign=top align=right bgColor=#275883 
+                height=20>COPYRIGHT © 2002-2008. ALL RIGHTS RESERVED </TD></TR><!-- !copyright info --></TBODY></TABLE></TD><!-- !right colomn of the page -->
+          <TD bgColor=#275883><IMG height=1 
+            src="Rich Calendar, Cross-browser 100% JavaScript calendar script_files/space.gif" 
+            width=10 border=0> </TD></TR></TBODY></TABLE></TD></TR><!-- !body of the page --><!-- footer of the page -->
+  <TR>
+    <TD></TD></TR><!-- !footer of the page --></TBODY></TABLE></BODY></HTML>

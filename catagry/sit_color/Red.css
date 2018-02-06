@@ -1,0 +1,78 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+ 
+
+body {
+	/* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	background-position: 0% 0%;
+	/*font: 100% Verdana, Arial, Helvetica, sans-serif;*/
+ color:#910000;
+	 background-color:#330000;
+	 	padding: 0;
+ }
+ 
+
+ fieldset{
+ 	 color:#FFFF99
+	
+ 		}
+
+ table{
+ 
+  background-color:#800000
+
+  }
+
+
+ th {
+	color:black;
+ background-color:maroon;
+}
+
+ td{
+	color:#FFFF99;
+}
+
+h1 {
+	color:#800000;
+}
+
+h2 {
+	color:#9D1400;
+}
+
+h3, h4 {
+	color: #993333;
+}
+
+h5, h6 {
+	color: #FFCCCC;
+}
+
+a{ color:#FFB13E}
+a:hover{color: #FFFF99; 
+background-color:transparent;
+		font-size:larger;}
+
+	a:active{ color:maroon}
+a:before{
+  color: #990000;
+}
+}
+form {
+	background-color: #990000;
+}
+.style4 {
+	text-align: left;
+}
+
+
+
+
+form {
+    margin:             0;
+    padding:            0;
+    display:            inline;
+}
+

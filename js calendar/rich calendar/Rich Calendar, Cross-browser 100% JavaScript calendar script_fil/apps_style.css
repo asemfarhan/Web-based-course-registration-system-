@@ -1,0 +1,18 @@
+.apps_date {
+	FONT-WEIGHT: normal; FONT-SIZE: 9px; COLOR: #666666; FONT-FAMILY: Arial, Verdana
+}
+.apps_pages {
+	FONT-WEIGHT: bold; FONT-SIZE: 9px; COLOR: #006633; FONT-FAMILY: "Verdana"
+}
+.apps_title {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: maroon; FONT-FAMILY: Verdana, Tahoma, verdana
+}
+.apps_text {
+	FONT-WEIGHT: normal; FONT-SIZE: 13px; COLOR: #333333; FONT-FAMILY: Verdana, Times New Roman,verdana
+}
+.apps_announce {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: black; FONT-FAMILY: Verdana, Times, Arial, verdana
+}
+.apps_welcome {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #7ba803; FONT-FAMILY: Verdana, Times, Arial, verdana; TEXT-ALIGN: justify
+}

@@ -1,0 +1,120 @@
+.rc_calendar {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid
+}
+.rc_iframe_body {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND: #ffffff; MARGIN: 0px; BORDER-LEFT: 0px; CURSOR: default; BORDER-BOTTOM: 0px
+}
+.rc_iframe_body .rc_table {
+	FONT-SIZE: 11px; FONT-FAMILY: verdana,tahoma,sans-serif,arial
+}
+.rc_iframe_body .rc_wd_tr TD {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; COLOR: #000; PADDING-TOP: 2px; BORDER-BOTTOM: #000000 1px solid; WHITE-SPACE: nowrap; TEXT-ALIGN: center
+}
+.rc_iframe_body .rc_time_tr TD {
+	PADDING-RIGHT: 2px; BORDER-TOP: #000000 1px solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; COLOR: #000; PADDING-TOP: 2px; WHITE-SPACE: nowrap; TEXT-ALIGN: center
+}
+.rc_iframe_body .rc_head_tr TD {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FONT-WEIGHT: bold; PADDING-BOTTOM: 2px; COLOR: #000; PADDING-TOP: 2px; BORDER-BOTTOM: #000000 1px solid; WHITE-SPACE: nowrap; TEXT-ALIGN: center
+}
+.rc_iframe_body .rc_nav_tr TD {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FONT-WEIGHT: bold; PADDING-BOTTOM: 2px; COLOR: #000; PADDING-TOP: 2px; BORDER-BOTTOM: #000000 1px solid; WHITE-SPACE: nowrap; TEXT-ALIGN: center
+}
+.rc_iframe_body .rc_cal_tr TD {
+	BORDER-RIGHT: #fff 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #fff 1px solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 4px; BORDER-LEFT: #fff 1px solid; WIDTH: 20px; COLOR: #000; PADDING-TOP: 4px; BORDER-BOTTOM: #fff 1px solid; WHITE-SPACE: nowrap; TEXT-ALIGN: right
+}
+.rc_iframe_body .rc_footer_tr TD {
+	PADDING-RIGHT: 2px; BORDER-TOP: #000000 1px solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; COLOR: #000; PADDING-TOP: 2px; WHITE-SPACE: nowrap; TEXT-ALIGN: center
+}
+.rc_iframe_body .rc_hours {
+	WIDTH: 20px
+}
+.rc_iframe_body .rc_colon_span {
+	
+}
+.rc_iframe_body .rc_mins {
+	WIDTH: 20px
+}
+.rc_iframe_body .rc_mins {
+	WIDTH: 20px
+}
+.rc_iframe_body TD.rc_current {
+	FONT-WEIGHT: bold; BACKGROUND: #00f; COLOR: #fff
+}
+.rc_iframe_body TD.rc_today {
+	FONT-WEIGHT: bold
+}
+.rc_iframe_body TD.rc_weekend_head {
+	COLOR: #f00
+}
+.rc_iframe_body TD.rc_weekend_day {
+	COLOR: #f00
+}
+.rc_iframe_body TR.rc_highlight {
+	BORDER-RIGHT: #ccccff 1px solid; BORDER-TOP: #ccccff 1px solid; BACKGROUND: #ccccff; BORDER-LEFT: #ccccff 1px solid; BORDER-BOTTOM: #ccccff 1px solid
+}
+.rc_iframe_body TR.rc_highlight TD {
+	BORDER-RIGHT: #ccccff 1px solid; BORDER-TOP: #ccccff 1px solid; BACKGROUND: #ccccff; BORDER-LEFT: #ccccff 1px solid; BORDER-BOTTOM: #ccccff 1px solid
+}
+.rc_iframe_body TR.rc_highlight TD.rc_highlight {
+	BORDER-RIGHT: #9999ff 1px solid; BORDER-TOP: #9999ff 1px solid; BACKGROUND: #3366cc; BORDER-LEFT: #9999ff 1px solid; BORDER-BOTTOM: #9999ff 1px solid
+}
+.rc_calendar_alt {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid
+}
+.rc_iframe_body_alt {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND: #cccccc; MARGIN: 0px; BORDER-LEFT: 0px; CURSOR: default; BORDER-BOTTOM: 0px
+}
+.rc_iframe_body_alt .rc_table {
+	FONT-SIZE: 12px; BACKGROUND: #0f0; FONT-FAMILY: verdana,tahoma,sans-serif,arial
+}
+.rc_iframe_body_alt .rc_wd_tr TD {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; COLOR: #000; PADDING-TOP: 2px; BORDER-BOTTOM: #000000 1px solid; WHITE-SPACE: nowrap; TEXT-ALIGN: center
+}
+.rc_iframe_body_alt .rc_time_tr TD {
+	PADDING-RIGHT: 2px; BORDER-TOP: #000000 1px solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; COLOR: #000; PADDING-TOP: 2px; WHITE-SPACE: nowrap; TEXT-ALIGN: center
+}
+.rc_iframe_body_alt .rc_head_tr TD {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FONT-WEIGHT: bold; PADDING-BOTTOM: 2px; COLOR: #000; PADDING-TOP: 2px; BORDER-BOTTOM: #000000 1px solid; WHITE-SPACE: nowrap; TEXT-ALIGN: center
+}
+.rc_iframe_body_alt .rc_nav_tr TD {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FONT-WEIGHT: bold; PADDING-BOTTOM: 2px; COLOR: #000; PADDING-TOP: 2px; BORDER-BOTTOM: #000000 1px solid; WHITE-SPACE: nowrap; TEXT-ALIGN: center
+}
+.rc_iframe_body_alt .rc_cal_tr TD {
+	BORDER-RIGHT: #0f0 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #0f0 1px solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 4px; BORDER-LEFT: #0f0 1px solid; WIDTH: 25px; COLOR: #000; PADDING-TOP: 4px; BORDER-BOTTOM: #0f0 1px solid; WHITE-SPACE: nowrap; TEXT-ALIGN: right
+}
+.rc_iframe_body_alt .rc_footer_tr TD {
+	PADDING-RIGHT: 2px; BORDER-TOP: #000000 1px solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; COLOR: #000; PADDING-TOP: 2px; WHITE-SPACE: nowrap; TEXT-ALIGN: center
+}
+.rc_iframe_body_alt .rc_hours {
+	BORDER-RIGHT: #000 1px solid; BORDER-TOP: #000 1px solid; BACKGROUND: #66ff66; BORDER-LEFT: #000 1px solid; WIDTH: 20px; BORDER-BOTTOM: #000 1px solid
+}
+.rc_iframe_body_alt .rc_colon_span {
+	
+}
+.rc_iframe_body_alt .rc_mins {
+	BORDER-RIGHT: #000 1px solid; BORDER-TOP: #000 1px solid; BACKGROUND: #66ff66; BORDER-LEFT: #000 1px solid; WIDTH: 20px; BORDER-BOTTOM: #000 1px solid
+}
+.rc_iframe_body_alt TD.rc_current {
+	BORDER-RIGHT: #fff 1px solid; BORDER-TOP: #fff 1px solid; FONT-WEIGHT: bold; BACKGROUND: #fff; BORDER-LEFT: #fff 1px solid; COLOR: #00f; BORDER-BOTTOM: #fff 1px solid
+}
+.rc_iframe_body_alt TR.rc_highlight TD.rc_current {
+	BORDER-RIGHT: #fff 1px solid; BORDER-TOP: #fff 1px solid; FONT-WEIGHT: bold; BACKGROUND: #fff; BORDER-LEFT: #fff 1px solid; COLOR: #00f; BORDER-BOTTOM: #fff 1px solid
+}
+.rc_iframe_body_alt TD.rc_today {
+	FONT-WEIGHT: bold
+}
+.rc_iframe_body_alt TD.rc_weekend_head {
+	COLOR: #f00
+}
+.rc_iframe_body_alt TD.rc_weekend_day {
+	COLOR: #f00
+}
+.rc_iframe_body_alt TR.rc_highlight {
+	BORDER-RIGHT: #66ff66 1px solid; BORDER-TOP: #66ff66 1px solid; BACKGROUND: #66ff66; BORDER-LEFT: #66ff66 1px solid; BORDER-BOTTOM: #66ff66 1px solid
+}
+.rc_iframe_body_alt TR.rc_highlight TD {
+	BORDER-RIGHT: #66ff66 1px solid; BORDER-TOP: #66ff66 1px solid; BACKGROUND: #66ff66; BORDER-LEFT: #66ff66 1px solid; BORDER-BOTTOM: #66ff66 1px solid
+}
+.rc_iframe_body_alt TR.rc_highlight TD.rc_highlight {
+	BORDER-RIGHT: #9999ff 1px solid; BORDER-TOP: #9999ff 1px solid; BACKGROUND: #66ff66; BORDER-LEFT: #9999ff 1px solid; BORDER-BOTTOM: #9999ff 1px solid
+}

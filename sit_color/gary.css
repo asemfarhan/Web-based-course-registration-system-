@@ -1,0 +1,24 @@
+﻿body {
+	background-color:#77630C;
+}
+
+body, td, th {
+	color: #E0CE76;
+}
+
+h1, h2 {
+	color: #CCCC00;
+}
+
+h3, h4, h5, h6 {
+	color: #CCCC00;
+}
+
+a {
+  color: #FFFF99;
+}
+a:link{	color:#FCEE45}
+a:hover{color: #FCEE45; 
+background-color:transparent;
+		font-size:larger;}
+
